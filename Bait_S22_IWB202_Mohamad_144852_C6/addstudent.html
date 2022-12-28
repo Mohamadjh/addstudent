@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title> اضافة طالب</title>
+    <link rel="stylesheet" href="StyleSheet1.css" type="text/css" />
+    <script src="Script1.js" type="text/javascript"></script>
+</head>
+<body onload="GenerateCaptcha();">
+        <p class="hh">اضافة طالب</p>
+        <div>
+            <label class="lbl">اسم المستخدم</label>
+            <input type="text" id="username" class="txtbx" required pattern="[A-Z][A-Za-z]+_\d$" />
+            <label class="lbl" id="lbluser">s</label>
+            <br /><br />
+            <label class="lbl">اسم الطالب</label>
+            <input type="text" id="studentname" class="txtbx" required onkeypress="namestudent(event);" /><br /><br />
+            <label class="lbl">تاريخ الولادة</label>
+            <input type="date" id="date" class="txtbx" required /><br /><br />
+            <label class="lbl" for="program">البرنامج</label>
+            <select name="program" id="program" class="txtbx">
+                <option value="bit">bit</option>
+                <option value="tic">tic</option>
+                <option value="bait">bait</option>
+                <option value="tcc">tcc</option>
+            </select>
+            <br /><br />
+            <label class="lbl">الموبايل</label>
+            <input type="tel" id="tel" class="txtbx" required /><br /><br />
+            <label class="lbl">يرجى ادخال رمز التحقق </label>
+            <label id="txtCaptcha" class="txttxt">s</label>
+            <br />
+            <input type="text" id="txtCompare" class="txtbx" required />
+            <br /><br />
+            <div>
+                <input type="button" id="button" class="btn" value="اضافة" onclick="clsAlphaNoOnly();+namestudent(event); +ValidCaptcha(); +addData(); " />
+            </div>
+            <br /><br />
+            <p class="hh">جدول باسماء الطلاب</p>
+            <br />
+            <label class="lbl" for="program">البرنامج</label>
+            <select name="view" id="view" class="txtbx" onchange="filter();">
+                <option value="all">all</option>
+                <option value="bit">bit</option>
+                <option value="tic">tic</option>
+                <option value="bait">bait</option>
+                <option value="tcc">tcc</option>
+            </select>
+            <br /><br />
+            <label class="lbl" for="program">فرز حسب</label>
+            <input type="radio" id="rdnumber" class="rd" value="رقم المستخدم" onclick="sort(1);" />
+            <label for="rdnumber" class="lrd">رقم المستخدم</label>
+            <input type="radio" id="rdname" class="rd" value="اسم الطالب" onclick="sort(2);" />
+            <label for="rdname" class="lrd">اسم الطالب</label>
+            <input type="radio" id="rdprogram" class="rd" value="البرنامج" onclick="sort(3);" />
+            <label for="rdprogram" class="lrd">البرنامج</label>
+            <br /><br />
+                  <table align="center" id="tb">
+                      <tr>
+                          <th>الرقم</th>
+                          <th>اسم المستخدم</th>
+                          <th>اسم الطالب</th>
+                          <th>البرنامج</th>
+                      </tr>
+                      <tbody id="rows">
+                      </tbody>
+                  </table>
+            <br /><br />
+                  <input type="button" id="buttonconvert" class="btn" value="تحويل" onclick="tableToJson();" />
+            <br /><br />
+            <textarea id="txtarea" class="txar" ></textarea>
+        </div>
+</body>
+</html>
