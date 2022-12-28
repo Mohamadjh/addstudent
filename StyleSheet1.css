@@ -1,0 +1,77 @@
+﻿.hh {
+    font-weight:500;
+    font-size:x-large;
+    text-align:right;
+    color:red;
+    direction:rtl;
+    margin-right:175px;
+}
+.lbl {
+    text-align: right;
+    direction: rtl;
+    float:right;
+    clear:both;
+    width:75px;
+}
+.txtbx {
+    float: right;
+    margin-right: 50px;
+    width: 200px;
+    text-align: right;
+    direction: rtl;
+}
+.txttxt {
+    float: right;
+    margin-right: 50px;
+    width: 200px;
+    text-align: right;
+    direction: rtl;
+    text-decoration: line-through;
+}
+.btn {
+    float: right;
+    margin-right: 200px;
+    width: 100px;
+}
+table {
+    margin-right: 100px;
+    float: right;
+    direction: rtl;
+    border: 1px solid;
+    border-collapse: collapse;
+    width: 250px;
+}
+tr , td,th {
+    direction: rtl;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+.v {
+    float: right;
+    margin-right: 75px;
+    width: 100px;
+    text-align: right;
+    direction: rtl;
+}
+.rd {
+    float: right;
+    margin-right: 75px;
+    text-align: right;
+    direction: rtl;
+}
+.lrd {
+    float: right;
+    text-align: right;
+    direction: rtl;
+}
+body {
+    min-height: 200vh;
+    float:right;
+}
+.txar {
+    float: right;
+    width: 500px;
+    min-height: 200px;
+    margin-right: 100px;
+    resize:none;
+}
